@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Download</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            // Ссылка на файл на GitHub
+            var link = document.createElement("a");
+            link.href = "https://github.com/DOGi23/XboxFanRepo/raw/main/XboxFamRepo.ini"; // Замените ссылку на реальный путь к вашему файлу на GitHub
+            link.download = "XboxFanRepo.ini"; // Название файла после скачивания
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
+    </script>
+    <p>Если скачивание не началось автоматически, <a id="manualDownload" href="https://github.com/username/repository/raw/main/path/to/your/file.ext" download="имя_файла.ext">нажмите здесь</a>.</p>
+</body>
+</html>
